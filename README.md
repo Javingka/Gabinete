@@ -3,7 +3,7 @@ Gabinete
 
 Programaçãoo de cenários interativos para montagem "Gabinete de Alice"
 
-A programação precisa das seguintes bibliotecas: /br
+A programação precisa das seguintes bibliotecas: 
 controlP5 (para control)
 Toxiclibs (para cenário nuvem)
 Punktiert (para cenário atraccao)
