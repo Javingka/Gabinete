@@ -4,6 +4,7 @@ class Cenario {
   public PVector posGlobal;
   public int radEsfera;
   public String nome;
+  public float [] varFromKinect;
   
   public Cenario(float angX, float angY, float angZ, int _radEsfera, String _nome){ 
     anguloPos_X = angX;
@@ -17,7 +18,9 @@ class Cenario {
 //CALCULO DA POSIÇĀO DO CENARIO EM RELAÇĀO COM O VETOR DO EIXO 'Y' NO CENTRO DA ESFERA 
     posGlobal = calculaPosCartesiana( originalRef, anguloPos_X, anguloPos_Y, anguloPos_Z );
     
-  }   private PVector calculaPosCartesiana( PVector original , float ax, float ay, float az){
+  }   
+  
+  private PVector calculaPosCartesiana( PVector original , float ax, float ay, float az){
     float rX0, rX1, rX2;
     float rY0, rY1, rY2;
     float rZ0, rZ1, rZ2;
@@ -69,8 +72,9 @@ class Cenario {
   public PMatrix3D getCenarioMatrix() {
      PMatrix3D cenarioM = new PMatrix3D();
      cenarioM.reset();
-     cenarioM.rotateX(anguloPos_X);
      cenarioM.rotateY(anguloPos_Y);
+     cenarioM.rotateX(anguloPos_X);
+     
      cenarioM.rotateZ(anguloPos_Z);
      return cenarioM;
   }

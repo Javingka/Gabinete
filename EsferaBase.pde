@@ -35,7 +35,7 @@ class EsferaBase {
     cenarios.add( new CenarioRevoada(p5, PI,0, PI*.5, radEsfera, "Revoada") );
     cenarios.add( new CenarioAtraccao(p5, 0,  PI*1.5, PI*.5, radEsfera,  "Atraccao" ) );
     cenarios.add( new CenarioSer01(p5, PI*.25, 0,  0 , radEsfera, "Ser01") );
-    if (nomePai.equals("PApp1"))  cenarios.add( new CenarioNuvem(p5, 0, 0,  PI*.5, radEsfera, "Nuvem", "WithControls") );
+    if (nomePai.equals("PApp1"))  cenarios.add( new CenarioNuvem(p5, 0, PI*.5,  PI*.5, radEsfera, "Nuvem", "WithControls") ); //so o papplet1 tem controles p5
     else cenarios.add( new CenarioNuvem(p5, 0, 0,  PI*.5, radEsfera, "Nuvem") );
     cenarios.add( new CenarioRodape_0(p5, 0, 0,  0 , radEsfera, "Rodape_0") );
     
@@ -99,9 +99,14 @@ class EsferaBase {
 //DESENHO CENARIOS    
     for ( Cenario c : cenarios ){
       String n = c.getNameCenario();
-      if (listaCenariosLigados.contains(n)) ligaCenario( c );  
+      if (listaCenariosLigados.contains(n)) {
+        if (n.equals("Nuvem")) {
+          ligaCenario( c , new PVector (0, PI*.01f, 0) ); //se desenha o cenario com um offset pra fazer-lho visivel
+        } else {
+          ligaCenario( c );  
+        }
+      }
     }
-    
 //    p5.popMatrix();
 //CALCULO DISTANCIAS
 //   println("distancia cAtraccao: " + cAtraccao.getDistanceToUpPosition() + " distancia revoada: " + revoada.getDistanceToUpPosition());
@@ -112,6 +117,15 @@ class EsferaBase {
     p5.rotateX( c.getAnguloPosicaoX() );
     p5.rotateY( c.getAnguloPosicaoY() );
     p5.rotateZ( c.getAnguloPosicaoZ() );
+    p5.translate(0, -radEsfera, 0 ); //desde o centro da esfera até a superfice
+    c.drawCenario();
+    p5.popMatrix();
+  }
+  public void ligaCenario(Cenario c, PVector offset){
+    p5.pushMatrix();
+    p5.rotateX( c.getAnguloPosicaoX() + offset.x );
+    p5.rotateY( c.getAnguloPosicaoY() + offset.y );
+    p5.rotateZ( c.getAnguloPosicaoZ() + offset.z );
     p5.translate(0, -radEsfera, 0 ); //desde o centro da esfera até a superfice
     c.drawCenario();
     p5.popMatrix();
@@ -156,6 +170,7 @@ class EsferaBase {
   public void setDistanciaFoco(float _dist) {   
     distanciaFoco = 20000 * _dist;
   }
+ 
   public void setAng_X_Puntero(float _ang) {    angulosPosicaoPuntero.x = _ang;  }
   public void setAng_Y_Puntero(float _ang){     angulosPosicaoPuntero.y = _ang;  }
   public void setAng_Z_Puntero(float _ang){     angulosPosicaoPuntero.z = _ang;  }
