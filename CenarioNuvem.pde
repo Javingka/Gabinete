@@ -1,4 +1,4 @@
-import peasy.*;
+//import peasy.*;
 import toxi.geom.*;
 import java.util.*;
 class CenarioNuvem extends Cenario {
