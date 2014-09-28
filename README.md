@@ -8,7 +8,9 @@ ControlP5 (para control) / Toxiclibs (para cenário nuvem) / Punktiert (para cen
 
 Esse código implementa numa programação só as seguentes PApplets:
 Janela de control
+
 Janela de previsualização dos cenários no modelo 3D
+
 Janelas de projeção de animações
 Janelas de control interno do cenario nuvem
 
