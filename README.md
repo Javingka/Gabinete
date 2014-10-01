@@ -1,10 +1,16 @@
 Gabinete
 ========
 
-Programaçãoo de cenários interativos para montagem "Gabinete de Alice"
+Programação em processo de cenários interativos para montagem "Gabinete de Alice"
 
 A programação precisa das seguintes bibliotecas: 
-ControlP5 (para control) / Toxiclibs (para cenário nuvem) / Punktiert (para cenário atraccao)
+ControlP5 (para control) 
+http://www.sojamo.de/libraries/controlP5/
+/ Toxiclibs (para cenário nuvem) 
+http://toxiclibs.org/
+/ Punktiert (para cenário atraccao)
+http://www.lab-eds.org/punktiert
+
 
 Esse código implementa numa programação só as seguentes PApplets:
 
