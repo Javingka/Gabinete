@@ -1,17 +1,22 @@
 Gabinete
 ========
 
-ProgramaÃ§Ã£o de cenÃ¡rios interativos para montagem "Gabinete de Alice"
+ProgramaÃ§Ã£oo de cenÃ¡rios interativos para montagem "Gabinete de Alice"
 
-A programação precisa das seguintes bibliotecas:
-controlP5 (para control)
-Toxiclibs (para cenário nuvem)
-Punktiert (para cenário atraccao)
+A programaÃ§Ã£o precisa das seguintes bibliotecas: 
+ControlP5 (para control) / Toxiclibs (para cenÃ¡rio nuvem) / Punktiert (para cenÃ¡rio atraccao)
 
-Esse código implementa numa programação só as seguentes PApplets:
+Esse cÃ³digo implementa numa programaÃ§Ã£o sÃ³ as seguentes PApplets:
+
 Janela de control
-Janela de previsualização dos cenários no modelo 3D
-Janelas de projeção de animações
+
+Janela de previsualizaÃ§Ã£o dos cenÃ¡rios no modelo 3D
+
+Janelas de projeÃ§Ã£o de animaÃ§Ãµes
+
 Janelas de control interno do cenario nuvem
 
-O projeto considera que as janelas de control e previsualização funcionarão num computador (mac mini) e as janelas de projeção de animações num outro (windows). Ou seja essa programação vai estar dividida entre estes computadores. No mac mini, além das janelas mencionadas também vai ter uma janela de control das duas kinects utilizadas para interagir com as projeções.
+
+O projeto considera que as janelas de control e previsualizaÃ§Ã£o funcionarÃ£o num computador (mac mini) e as janelas de projeÃ§Ã£o de animaÃ§Ãµes num outro (windows). Ou seja essa programaÃ§Ã£o vai estar dividida entre estes computadores. 
+
+No mac mini, alÃ©m das janelas mencionadas tambÃ©m vai ter uma janela de control das duas kinects utilizadas para interagir com as projeÃ§Ãµes.
