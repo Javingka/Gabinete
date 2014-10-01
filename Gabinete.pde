@@ -1,11 +1,18 @@
 /**
-* Base do software.
-* Cenarios funcionando
-* Controles funcionando
-* Modo reproducao de experiencia en trabajo
-* Inclusao de mais cenarios
-* Inclusao da possibilidade de elevar a câmara
+* Programa para execuñ{ao do Gabinete de Alice. Que considera uma projeção com 4 projetores e duas kinects para a interação
+* nessa versão a leitura da kinect não esta implementada, por que ela sera implementada quando essa programação fique dividida em dois computadores
+* um dele com a leitura das kinects, constrol dos cenários visíveis e previsualização no modelo virtual
+* o outro com o código de visualização
+*
+* O código aqui é composto por 4 PApplet principais:
+* PApplet default  Projeção de animações na tela de proporciones ajustadas a 2 projetores (que funcionara no computador 1)
+* PApplet 2  Projeção de animações na tela de proporciones ajustadas a 2 projetores (que funcionara no computador 1)
+* PApplet 3 Previsualização do modelo virtual  (que funcionara no computador 2)
+* PApplet 4 Control dos cenários visíveis  (que funcionara no computador 2)
+*
+* by Javier Cruz
 */ 
+
 import controlP5.*;  
 import java.awt.Frame;
 import java.awt.event.KeyEvent;
@@ -310,7 +317,7 @@ public class PApplet4 extends PApplet {
   boolean viewScreens = false; //para visualizar os limites da tela de cada projetor
   boolean camara_In; //Se a visualizacao esta em estado de 3ra pessoa ou 1era
   
-  boolean anteriorPreview; //boolean para evaluar los cambios entre ocular e mostrar janela
+  boolean anteriorPreview; //boolean para evaluar los cambios entre ocultar e mostrar janela
   boolean cenariosCarregados = false; //para carrrgar uma vez os cenarios
 //  Textfield XangPosText, YangPosText, ZangPosText;
 //  Textfield XangCamText, YangCamText, ZangCamText;
